@@ -38,7 +38,7 @@ def main(params_file: str, template_dir: str):
 
 
 def get_command_line_args() -> (str,str):
-    args = sys.argv
+    args = sys.argv.copy()
     args.pop[0] # remove script name
     num_args_expected = 3
     if len(args) != num_args_expected:
