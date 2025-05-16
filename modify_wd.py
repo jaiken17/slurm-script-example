@@ -1,7 +1,7 @@
 from typing import List
 import shutil
 
-param_placeholders = ['PARAM1', 'PARAM2']
+param_placeholders = ['PARAM1', 'PARAM2', 'PARAM3']
 files_to_replace = ["initial_conditions.txt"]
 
 
