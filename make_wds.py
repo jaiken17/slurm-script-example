@@ -40,7 +40,7 @@ def main(params_file: str, template_dir: str):
 def get_command_line_args() -> (str,str):
     args = sys.argv
     args = args[1:-1].copy()
-    num_args_expected = 3
+    num_args_expected = 2
     if len(args) != num_args_expected:
         raise Exception(f'{len(args)} command line args provided; {num_args_expected} command line args expected.')
     params_file = args[1]
