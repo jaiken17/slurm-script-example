@@ -1,5 +1,6 @@
 from typing import List
 import shutil
+import sys
 
 param_placeholders = ['PARAM1', 'PARAM2', 'PARAM3']
 files_to_replace = ["initial_conditions.txt"]
