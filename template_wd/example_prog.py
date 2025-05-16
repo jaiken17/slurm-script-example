@@ -55,12 +55,16 @@ def main(initial_conditions):
     x, y = x0, y0
     vx, vy = vx0, vy0
 
+    # Open output file
+    filename = 'output.data'
+    file = open(filename, 'w')
+
     # Header
-    print(f"{'Time (s)':>8} {'X (m)':>10} {'Y (m)':>10} {'Vx (m/s)':>10} {'Vy (m/s)':>10}")
+    print(f"{'Time (s)':>8} {'X (m)':>10} {'Y (m)':>10} {'Vx (m/s)':>10} {'Vy (m/s)':>10}",file=file)
 
     # Integration loop
     while y >= 0 and t <= t_max:
-        print(f"{t:8.2f} {x:10.3f} {y:10.3f} {vx:10.3f} {vy:10.3f}")
+        print(f"{t:8.2f} {x:10.3f} {y:10.3f} {vx:10.3f} {vy:10.3f}", file=file)
         
         # Update position
         x += vx * dt
