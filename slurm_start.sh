@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash"
 #SBATCH --time=00:05:00
 ##SBATCH --account=#{groupName}
 #SBATCH --job-name=example_job
@@ -27,4 +26,4 @@ cd $DIR
 
 # Copy the script that runs the program, and run script with srun (SLURM)
 cp ../prog_run.sh .
-srun ./prog_run.sh
+srun prog_run.sh
