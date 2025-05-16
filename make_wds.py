@@ -6,7 +6,7 @@ files_to_replace = ["initial_conditions.txt"]
 
 
 def replace_params(new_wd: str, new_params: List[str]):
-    for file in files_to_replace
+    for file in files_to_replace:
         file_path = new_wd + '/' + file
         with open(file_path, 'r') as f:
             text = f.read()
