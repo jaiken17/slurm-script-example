@@ -1,0 +1,3 @@
+v0 = PARAM1
+angle_deg = PARAM2
+dt = PARAM3
