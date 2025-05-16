@@ -30,7 +30,7 @@ def main(params_file: str, template_dir: str):
         for line in file:
             entries = line.strip().split()
             new_wd = entries[0]
-            params = entries[1:-1]
+            params = entries[1:]
             if len(params) != len(param_placeholders):
                 raise Exception(f'Found {len(params)} parameters; expected {len(param_placeholders)}')
             copy_dir(template_dir,new_wd)
@@ -39,12 +39,12 @@ def main(params_file: str, template_dir: str):
 
 def get_command_line_args() -> (str,str):
     args = sys.argv
-    args = args[1:-1].copy()
+    args = args[1:]
     num_args_expected = 2
     if len(args) != num_args_expected:
         raise Exception(f'{len(args)} command line args provided; {num_args_expected} command line args expected.')
-    params_file = args[1]
-    template_dir = args[2]
+    params_file = args[0]
+    template_dir = args[1]
 
     return (params_file, template_dir)
 
